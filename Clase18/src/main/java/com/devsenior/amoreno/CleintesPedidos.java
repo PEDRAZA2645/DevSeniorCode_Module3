@@ -2,11 +2,11 @@ package com.devsenior.amoreno;
 
 import org.apache.logging.log4j.LogManager;
 
-public class Main
+public class CleintesPedidos
 {
     public static void main( String[] args ) {
-        var log = LogManager.getLogger(Main.class);
 
+        var log = LogManager.getLogger(CleintesPedidos.class);
         log.info("inicia la ejecución del programa");
         var clientes = new GestionClientes();
         log.debug("Regfistando el cliente (1. Juan Perez)");
