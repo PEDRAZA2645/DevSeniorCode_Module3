@@ -16,14 +16,19 @@ public class Inventory {
     }
 
     public void sellProduct(String name, Integer quantity) {
-        var product = getProductByName(name);
-        //Hay cantidad suficiente
-        if (product.getStock() < quantity){
-            System.out.println("No hay suficiente stock para el producto: " + name);
-            return;
+        try {
+            var product = getProductByName(name);
+
+            if (product.getStock() < quantity){
+                System.out.println("No hay suficiente stock para el producto: " + name);
+                return;
+            }
+            product.setStock(product.getStock() - quantity);
+        } catch (ProductNotFoundException e) {
+            System.out.println(e.getMessage());
         }
-        product.setStock(product.getStock() - quantity);
     }
+
 
     public Double calculateTotalInventory(){
         var total = 0d;
@@ -36,10 +41,10 @@ public class Inventory {
 
     private Product getProductByName(String name){
         for(var product : products){
-            if(name.equals(product.getName())){
+            if(name.equalsIgnoreCase(product.getName())){
                 return product;
             }
         }
-        return null;
+        throw new ProductNotFoundException(name);
     }
 }

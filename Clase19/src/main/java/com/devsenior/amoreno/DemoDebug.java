@@ -8,9 +8,9 @@ public class DemoDebug
 {
     public static void main( String[] args ) {
         var inventory = new Inventory();
-        inventory.addProduct(new Product("Laptop", 1200.00, 10));
-        inventory.addProduct(new Product("Smartphone", 800.00, 5));
-        inventory.addProduct(new Product("Tablet", 300.00, 20));
+        inventory.addProduct(new Product("Laptop", 1200d, 10));
+        inventory.addProduct(new Product("Smartphone", 800.33, 5));
+        inventory.addProduct(new Product("Tablet", 300d, 20));
 
         inventory.sellProduct("Laptop", 2);
         inventory.sellProduct("Smartphone", 1);
