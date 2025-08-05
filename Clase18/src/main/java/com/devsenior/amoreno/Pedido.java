@@ -33,4 +33,8 @@ public class Pedido {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+    @Override
+    public String toString() {
+        return String.format("pedido{clienteId='%s', producto='%s', cantidad=%d}", clienteId, producto, cantidad);
+    }
 }
