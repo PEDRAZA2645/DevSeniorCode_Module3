@@ -1,5 +1,8 @@
 package com.devsenior.amoreno;
 
+import com.devsenior.amoreno.exception.InsufficientQuantityException;
+import com.devsenior.amoreno.exception.NotFoundException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +23,10 @@ public class Inventory {
             var product = getProductByName(name);
 
             if (product.getStock() < quantity){
-                System.out.println("No hay suficiente stock para el producto: " + name);
-                return;
+                throw new InsufficientQuantityException("El Producto '" + name + "' no tiene stock suficiente");
             }
             product.setStock(product.getStock() - quantity);
-        } catch (ProductNotFoundException e) {
+        } catch (NotFoundException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -39,12 +41,12 @@ public class Inventory {
     }
 
 
-    private Product getProductByName(String name){
+    private Product getProductByName(String name) throws NotFoundException{
         for(var product : products){
             if(name.equalsIgnoreCase(product.getName())){
                 return product;
             }
         }
-        throw new ProductNotFoundException(name);
+        throw new NotFoundException("Producto '" + name + "' no encontrado");
     }
 }
