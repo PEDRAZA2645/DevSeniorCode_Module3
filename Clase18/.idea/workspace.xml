@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3bca8d3-7bf5-4214-98c5-188aa956606e" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/exception/InsufficientQuantityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/DemoDebug.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/DemoDebug.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Clase19/src/main/java/com/devsenior/amoreno/exception/NotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

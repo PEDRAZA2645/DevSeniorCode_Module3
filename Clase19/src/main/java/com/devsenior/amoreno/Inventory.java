@@ -15,10 +15,17 @@ public class Inventory {
     }
 
     public void addProduct(Product product){
-        products.add(product);
+        try{
+            var currentProduct = getProductByName(product.getName());
+            var newQuantity = currentProduct.getStock() + product.getStock();
+            var newPrice = (currentProduct.getPrice() * currentProduct.getStock() + product.getPrice() * product.getStock()) / newQuantity;
+            currentProduct.setStock(newQuantity);
+        }catch (NotFoundException e){
+            products.add(product);
+        }
     }
 
-    public void sellProduct(String name, Integer quantity) {
+    public void sellProduct(String name, Integer quantity) throws NotFoundException{
         try {
             var product = getProductByName(name);
 
