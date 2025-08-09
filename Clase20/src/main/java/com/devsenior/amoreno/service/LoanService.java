@@ -34,4 +34,8 @@ public class LoanService {
         }
         throw new NotFoundException("No existe un prestamo del libro: " + isbn + " para el usuario: " + id);
     }
+
+    public List<Loan> getLoans() {
+        return loans;
+    }
 }
